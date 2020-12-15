@@ -4,6 +4,7 @@ from . import views
 
 
 urlpatterns = [
-    path('<int:pk>/', views.GetUserNetView.as_view()),
+    path('profile/<int:pk>/', views.GetUserNetView.as_view({'get': 'retrieve', 'put': 'update'})),
+    path('<int:pk>/', views.UserNetPublicView.as_view({'get': 'retrieve'})),
 
 ]
