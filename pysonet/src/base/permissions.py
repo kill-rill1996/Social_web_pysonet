@@ -23,7 +23,7 @@ from rest_framework.permissions import BasePermission
 #         return obj.author == request.user or obj.entry.group.founder == request.use
 
 
-class IsAuthorComment(BasePermission):
+class IsAuthor(BasePermission):
     """Author of comment or post"""
 
     def has_permission(self, request, view):
